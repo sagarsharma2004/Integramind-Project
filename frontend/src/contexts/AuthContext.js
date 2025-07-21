@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+// Set global axios base URL
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://integramind-project.onrender.com';
+axios.defaults.baseURL = API_BASE_URL;
 
 const AuthContext = createContext();
 
